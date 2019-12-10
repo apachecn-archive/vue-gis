@@ -1,2 +1,5 @@
 # vue-gis
-在vue中使用gis相关插件的demo
+
+本项目采用插件
+
+本项目实现demo内容有：
