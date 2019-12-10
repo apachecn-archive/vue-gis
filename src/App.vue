@@ -5,13 +5,25 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/> -->
-    <div class="siderbar">siderbar</div>
+    <div class="siderbar">
+      <Siderbar/>
+    </div>
     <div class="container">
       <div class="header">header</div>
       <div class="content">content</div>
     </div>
   </div>
 </template>
+
+<script>
+import Siderbar from '@/components/layout/Siderbar'
+export default {
+  components: {
+    Siderbar
+  }
+  
+}
+</script>
 
 <style lang="scss">
 html, body {
@@ -26,6 +38,7 @@ html, body {
   height: 100%;
   .siderbar {
     width: 240px;
+    background: #545c64;
   }
   .container {
     flex: 1;
