@@ -1,16 +1,10 @@
 <template>
   <div id="app" class="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/> -->
     <div class="siderbar">
       <Siderbar/>
     </div>
     <div class="container">
-      <div class="header">header</div>
-      <div class="content">content</div>
+      <router-view/>
     </div>
   </div>
 </template>
@@ -21,7 +15,6 @@ export default {
   components: {
     Siderbar
   }
-  
 }
 </script>
 
@@ -36,22 +29,17 @@ html, body {
   display: flex;
   width: 100%;
   height: 100%;
+  background: #F5F7F9;
   .siderbar {
     width: 240px;
-    background: #545c64;
+    background: #001B31;
+    overflow: hidden;
+    overflow-y: auto;
   }
   .container {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    .header {
-      flex: none;
-      height: 50px;
-      line-height: 50px;
-    }
-    .content {
-      flex: 1;
-    }
+    overflow: hidden;
+    overflow-y: auto;
   }
 }
 </style>
