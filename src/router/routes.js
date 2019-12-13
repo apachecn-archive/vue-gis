@@ -7,6 +7,22 @@ const routes = [
     component: () => import('@/views/home')
   },
   {
+    path: '/base',
+    redirect: '/base/start',
+    name: 'base',
+    text: '基础',
+    icon: 'el-icon-s-help',
+    component: () => import('@/views/base'),
+    children: [
+      {
+        path: '/base/start',
+        name: 'start',
+        text: '起步',
+        component: () => import('@/views/base/start')
+      }
+    ]
+  },
+  {
     path: '/test',
     redirect: '/test/test1',
     name: 'test',

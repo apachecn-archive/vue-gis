@@ -4,7 +4,7 @@ import routes from '@/router/routes'
 export default {
   name: 'Siderbar',
   methods: {
-    renderItem() {
+    renderItem () {
       return (
         routes.map(item => {
           // 由于只有2层，所以简单写了
@@ -37,7 +37,7 @@ export default {
       )
     }
   },
-  render() {
+  render () {
     return (
       <div>
         <div class="header">vue-gis案例demo</div>

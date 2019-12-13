@@ -13,8 +13,9 @@
 > 本项目采用插件``leaflet.js``和高德地图开发gis应用。
 
 - [leaflet.js使用文档](https://leafletjs.com/)
+- [高德地图API](https://lbs.amap.com/api/javascript-api/summary)
 
-项目使用
+项目使用：
 
 ```bash
 # yarn
@@ -29,4 +30,11 @@
 
 ## 使用起步
 
-安装
+安装插件
+
+```javascript
+yarn add leaflet
+yarn add leaflet.chinatmsproviders
+```
+
+[leaflet.chinatmsproviders](https://www.npmjs.com/package/leaflet.chinatmsproviders)
