@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Siderbar from '@/components/layout/Siderbar'
+import Siderbar from '@/components/layout/siderbar'
 export default {
   components: {
     Siderbar

@@ -7,11 +7,12 @@ const routes = [
     component: () => import('@/views/home')
   },
   {
-    path: '',
+    path: '/test',
     redirect: '/test/test1',
     name: 'test',
     text: '测试',
     icon: 'el-icon-s-help',
+    component: () => import('@/views/test'),
     children: [
       {
         path: '/test/test1',

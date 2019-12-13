@@ -1,5 +1,6 @@
 <script>
 import routes from '@/router/routes'
+
 export default {
   name: 'Siderbar',
   methods: {
@@ -17,18 +18,16 @@ export default {
                 </template>
                 <el-menu-item-group>
                   {
-                    children.map(list => {
-                      return (
-                        <el-menu-item route={list} index={ list.path }>{ list.text }</el-menu-item>
-                      )
-                    })
+                    children.map(list => (
+                      <el-menu-item route={ list } index={ list.path }>{ list.text }</el-menu-item>
+                    ))
                   }
                 </el-menu-item-group>
               </el-submenu>
             )
           } else {
             return (
-              <el-menu-item index={ item.path }>
+              <el-menu-item route={item} index={ item.path }>
                 <i class={ item.icon }></i>
                 <span slot="title">{ item.text }</span>
               </el-menu-item>
@@ -38,17 +37,17 @@ export default {
       )
     }
   },
-  render(h) {
+  render() {
     return (
-      <div class="siderbar">
+      <div>
         <div class="header">vue-gis案例demo</div>
         <el-menu
-          default-active={ this.$route.path }
+          default-active={this.$route.path}
           background-color="#001B31"
           text-color="#fff"
           active-text-color="#ffd04b"
-          router={ true }>
-          { this.renderItem() }
+          router={true}>
+          {this.renderItem()}
         </el-menu>
       </div>
     )
@@ -56,17 +55,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  .siderbar {
-    .header {
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      font-size: 18px;
-      color: #FFFFFF;
-    }
-    .el-menu {
-      border: none;
-    }
-  }
+<style scoped>
+.header {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.el-menu {
+  border: none;
+}
 </style>

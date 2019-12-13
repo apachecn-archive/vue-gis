@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
+  <div class="home siderbar">
     home
+    <div class="header">111</div>
   </div>
 </template>
 
