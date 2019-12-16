@@ -4,9 +4,6 @@
 
 - [说明](#说明)
 - [使用起步](#使用起步)
-- [访问链接](#1113)
-- [访问链接](#1114)
-- [访问链接](#1115)
 
 ## 说明
 
@@ -34,7 +31,8 @@
 
 ```javascript
 yarn add leaflet
+# leaflet.chinatmsproviders插件提供了中国主流地图与leaflet结合的配置
 yarn add leaflet.chinatmsproviders
 ```
 
-[leaflet.chinatmsproviders](https://www.npmjs.com/package/leaflet.chinatmsproviders)
+[leaflet.chinatmsproviders文档](https://www.npmjs.com/package/leaflet.chinatmsproviders)

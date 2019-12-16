@@ -17,45 +17,48 @@ export default {
   },
   methods: {
     init () {
+      // 普通高德地图
       const normalm = L.tileLayer.chinaProvider('GaoDe.Normal.Map', {
         maxZoom: 18,
         minZoom: 1,
-        ak: '123321'
+        ak: '您申请的key值'
       })
+      // 卫星高德地图，无注解
       const imgm = L.tileLayer.chinaProvider('GaoDe.Satellite.Map', {
         maxZoom: 18,
-        minZoom: 1
+        minZoom: 1,
+        ak: '您申请的key值'
       })
+      // 卫星高德地图，有注解
       const imga = L.tileLayer.chinaProvider('GaoDe.Satellite.Annotion', {
         maxZoom: 18,
-        minZoom: 1
+        minZoom: 1,
+        ak: '您申请的key值'
       })
 
       const normal = L.layerGroup([normalm])
+      const img = L.layerGroup([imgm])
       const image = L.layerGroup([imgm, imga])
 
       const baseLayers = {
         '地图': normal,
-        '影像': image
+        '影像(无注解)': img,
+        '影像(有注解)': image
       }
 
+      // 第一个参数为容器id，第二个参数options配置
       const map = L.map('map', {
         center: center, // 初始化定位点
         zoom: 13, // 初始化显示级别
         maxZoom: 18, // 最大缩放
         minZoom: 1, // 最小缩放
-        layers: [normal], //
-        zoomControl: false,
-        attributionControl: false
+        layers: [normal], // 地图图层
+        zoomControl: false,  // 是否显示放大缩小按钮
+        attributionControl: false,  // 是否关闭leaflet广告链接（在地图的右下角）
+        closePopupOnClick: true,  // 点击地图是否关闭popup
       })
-
+      // 地图模式切换
       L.control.layers(baseLayers, null).addTo(map)
-      L.control
-        .zoom({
-          zoomInTitle: '放大',
-          zoomOutTitle: '缩小'
-        })
-        .addTo(map)
     }
   }
 }
