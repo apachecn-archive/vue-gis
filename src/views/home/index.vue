@@ -53,9 +53,9 @@ export default {
         maxZoom: 18, // 最大缩放
         minZoom: 1, // 最小缩放
         layers: [normal], // 地图图层
-        zoomControl: false,  // 是否显示放大缩小按钮
-        attributionControl: false,  // 是否关闭leaflet广告链接（在地图的右下角）
-        closePopupOnClick: true,  // 点击地图是否关闭popup
+        zoomControl: false, // 是否显示放大缩小按钮
+        attributionControl: false, // 是否关闭leaflet广告链接（在地图的右下角）
+        closePopupOnClick: true // 点击地图是否关闭popup
       })
       // 地图模式切换
       L.control.layers(baseLayers, null).addTo(map)

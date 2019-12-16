@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
-    1
+  <div>
+    起步
   </div>
 </template>

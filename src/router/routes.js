@@ -7,6 +7,34 @@ const routes = [
     component: () => import('@/views/home')
   },
   {
+    path: '/marker',
+    redirect: '/marker/one',
+    name: 'marker',
+    text: '打点',
+    icon: 'el-icon-s-help',
+    component: () => import('@/views/marker'),
+    children: [
+      {
+        path: '/marker/one',
+        name: 'oneMarker',
+        text: '打一个点',
+        component: () => import('@/views/marker/one')
+      },
+      {
+        path: '/marker/markers',
+        name: 'markers',
+        text: '打多个点',
+        component: () => import('@/views/marker/markers')
+      },
+      {
+        path: '/marker/popup',
+        name: 'popup',
+        text: '打点带popup',
+        component: () => import('@/views/marker/popup')
+      }
+    ]
+  },
+  {
     path: '/base',
     redirect: '/base/start',
     name: 'base',
@@ -19,34 +47,6 @@ const routes = [
         name: 'start',
         text: '起步',
         component: () => import('@/views/base/start')
-      }
-    ]
-  },
-  {
-    path: '/test',
-    redirect: '/test/test1',
-    name: 'test',
-    text: '测试',
-    icon: 'el-icon-s-help',
-    component: () => import('@/views/test'),
-    children: [
-      {
-        path: '/test/test1',
-        name: 'test1',
-        text: '测试1',
-        component: () => import('@/views/test/test1')
-      },
-      {
-        path: '/test/test2',
-        name: 'test2',
-        text: '测试2',
-        component: () => import('@/views/test/test2')
-      },
-      {
-        path: '/test/hh',
-        name: 'hh',
-        text: 'hh',
-        component: () => import('@/views/test/hh')
       }
     ]
   }
