@@ -22,7 +22,7 @@
 本项目实现demo内容有：
 
 > - [ ] 使用起步
-> - [x] 打点
+> - [ ] 打点(一个点、多个点、带popup的点)
 > - [x] 使用
 
 ## 使用起步
@@ -36,3 +36,4 @@ yarn add leaflet.chinatmsproviders
 ```
 
 [leaflet.chinatmsproviders文档](https://www.npmjs.com/package/leaflet.chinatmsproviders)
+
