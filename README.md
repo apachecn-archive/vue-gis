@@ -14,9 +14,9 @@
 
 项目使用：
 
-```bash
-# yarn
-# yarn dev
+```shell
+yarn
+yarn dev
 ```
 
 本项目实现demo内容有：
@@ -29,11 +29,11 @@
 
 安装插件
 
-```bash
-# yarn add leaflet
+```shell
+yarn add leaflet
 
 # leaflet.chinatmsproviders插件提供了中国主流地图与leaflet结合的配置
-# yarn add leaflet.chinatmsproviders
+yarn add leaflet.chinatmsproviders
 ```
 
 使用
@@ -50,8 +50,8 @@ import 'leaflet/dist/leaflet.css'
 
 安装插件
 
-```bash
-# yarn add leaflet.markercluster
+```shell
+yarn add leaflet.markercluster
 ```
 
 使用
