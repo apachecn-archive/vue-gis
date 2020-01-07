@@ -27,10 +27,10 @@ const routes = [
         component: () => import('@/views/marker/markers')
       },
       {
-        path: '/marker/popup',
-        name: 'popup',
-        text: '打点带popup',
-        component: () => import('@/views/marker/popup')
+        path: '/marker/markercluster',
+        name: 'markercluster',
+        text: '聚合',
+        component: () => import('@/views/marker/markercluster')
       }
     ]
   },

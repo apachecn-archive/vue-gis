@@ -3,9 +3,14 @@
 </template>
 
 <script>
+// 基础引入
 import L from 'leaflet'
 import 'leaflet.chinatmsproviders'
 import 'leaflet/dist/leaflet.css'
+// 聚合相关
+import 'leaflet.markercluster/dist/MarkerCluster.css'
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
+import 'leaflet.markercluster'
 
 // 常量
 // 定位中心点
@@ -75,7 +80,7 @@ export default {
     initMarkers () {
       // 造100个随机点
       const arr = new Array(100)
-      const markers = []
+      const heatMarkerLayer = L.markerClusterGroup(10)
       arr.fill(1).forEach((item, i) => {
         let marker = new L.Marker(
           i % 2 === 0 ? [center[0] + i * 0.01 * Math.random(), center[1] + i * 0.01 * Math.random()] : [center[0] - i * 0.01 * Math.random(), center[1] - i * 0.01 * Math.random()],
@@ -107,10 +112,10 @@ export default {
             marker.openPopup()
           }
         })
-        markers.push(marker)
+        heatMarkerLayer.addLayer(marker)
       })
-      // 批量打点
-      L.layerGroup(markers).addTo(this.map)
+      // 聚合打点
+      heatMarkerLayer.addTo(this.map)
     },
     clearCurMarker () {
       if (this.curMarker) {
